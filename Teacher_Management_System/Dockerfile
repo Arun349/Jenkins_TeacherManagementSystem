@@ -9,7 +9,7 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["Teacher_Management_System/Teacher_Management_System.csproj", "Teacher_Management_System/"]
+COPY ["Teacher_Management_System.csproj", "Teacher_Management_System/"]
 RUN dotnet restore "./Teacher_Management_System/./Teacher_Management_System.csproj"
 COPY . .
 WORKDIR "/src/Teacher_Management_System"
